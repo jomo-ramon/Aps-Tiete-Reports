@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane fx:id="flwPane" layoutY="-2.0" prefHeight="606.0" prefWidth="270.0" style="-fx-background-color: #36873a;">
+         <children>
+            <Line endX="164.0" opacity="0.55" startX="-100.0" stroke="#b1ddad">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#abffa8" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Line>
+            <Line opacity="0.55" startX="-100.0" stroke="#b1ddad">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#abffa8" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Line>
+         </children>
+      </FlowPane>
+      <Pane layoutX="265.0" prefHeight="69.0" prefWidth="535.0">
+         <children>
+            <Label fx:id="nameTag" layoutX="69.0" layoutY="30.0" opacity="0.96" prefHeight="19.0" prefWidth="118.0" text="" textAlignment="CENTER" textFill="#615e5e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label disable="true" layoutX="187.0" layoutY="30.0" opacity="0.62" prefHeight="19.0" prefWidth="118.0" text="digitando" textAlignment="CENTER" textFill="#323030" />
+         </children></Pane>
+      <Line endX="100.0" endY="-7.0" layoutX="631.0" layoutY="7.0" opacity="0.38" startX="100.0" startY="60.5" stroke="#b1ddad" />
+      <Line endX="285.0" layoutX="525.0" layoutY="68.0" opacity="0.27" startX="-271.5" stroke="#b1ddad">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#abffa8" />
+               </light>
+            </Lighting>
+         </effect>
+      </Line>
+      <Pane layoutX="265.0" layoutY="487.0" prefHeight="113.0" prefWidth="535.0">
+         <children>
+            <TextArea fx:id="msgBox" layoutX="14.0" layoutY="29.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="55.0" prefWidth="435.0" promptText="Digite uma mensagem" style="-fx-border-color: #C0C0C0; -fx-border-radius: 10px;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Button fx:id="sendBtn" layoutX="458.0" layoutY="44.0" mnemonicParsing="false" onAction="#sendMsgEvent" prefHeight="26.0" prefWidth="63.0" text="Enviar" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="chatBox" layoutX="270.0" layoutY="69.0" prefHeight="411.0" prefWidth="527.0" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
